@@ -1,4 +1,25 @@
 import ClassGroup from "classgroup";
+import Image from "next/image";
+
+const SocialList = [
+  {
+    src: "/icon-facebook.svg",
+    title: "facebook",
+  },
+
+  {
+    src: "/icon-twitter.svg",
+    title: "twitter",
+  },
+  {
+    src: "/icon-pinterest.svg",
+    title: "pinterest",
+  },
+  {
+    src: "/icon-instagram.svg",
+    title: "instagram",
+  },
+];
 
 const Footer = () => {
   return (
@@ -6,34 +27,18 @@ const Footer = () => {
       <div className={classes.topFooter}>
         <img src="/logo.svg" alt="logo" />
         <div className={classes.socialContainer}>
-          <div className={classes.iconContainer}>
-            <img
-              className={classes.socialIcon}
-              src="/icon-facebook.svg"
-              alt="facebook"
-            />
-          </div>
-          <div className={classes.iconContainer}>
-            <img
-              className={classes.socialIcon}
-              src="/icon-twitter.svg"
-              alt="twitter"
-            />
-          </div>
-          <div className={classes.iconContainer}>
-            <img
-              className={classes.socialIcon}
-              src="/icon-pinterest.svg"
-              alt="pinterest"
-            />
-          </div>
-          <div className={classes.iconContainer}>
-            <img
-              className={classes.socialIcon}
-              src="/icon-instagram.svg"
-              alt="instagram"
-            />
-          </div>
+          {SocialList.map((icon) => (
+            <div className={classes.iconContainer} key={icon.title}>
+              <Image
+                className={classes.socialIcon}
+                src={icon.src}
+                alt={icon.title}
+                width="24"
+                height="24rem"
+                objectFit="contain"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -98,7 +103,7 @@ const classes = ClassGroup({
   },
 
   socialIcon: {
-    layout: "h-6 px-2 cursor-pointer",
+    layout: "px-2 cursor-pointer",
   },
 
   copyright: {
