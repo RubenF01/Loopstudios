@@ -21,6 +21,29 @@ const SocialList = [
   },
 ];
 
+const FooterNav = [
+  {
+    title: "About",
+    href: "#",
+  },
+  {
+    title: "Careers",
+    href: "#",
+  },
+  {
+    title: "Events",
+    href: "#",
+  },
+  {
+    title: "Products",
+    href: "#",
+  },
+  {
+    title: "Support",
+    href: "#",
+  },
+];
+
 const Footer = () => {
   return (
     <div className={classes.footerContainer}>
@@ -44,21 +67,11 @@ const Footer = () => {
 
       <div className={classes.botFooter}>
         <div className={classes.botNav}>
-          <a className={classes.navElement} href="#">
-            About
-          </a>
-          <a className={classes.navElement} href="#">
-            Careers
-          </a>
-          <a className={classes.navElement} href="#">
-            Events
-          </a>
-          <a className={classes.navElement} href="#">
-            Products
-          </a>
-          <a className={classes.navElement} href="#">
-            Support
-          </a>
+          {FooterNav.map((link) => (
+            <a className={classes.navElement} href={link.href} key={link.title}>
+              {link.title}
+            </a>
+          ))}
         </div>
         <p className={classes.copyright}>
           &copy; 2022 Loopstudios. All rights reserved.
