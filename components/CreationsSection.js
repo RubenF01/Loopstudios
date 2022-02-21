@@ -80,11 +80,14 @@ export default CreationsSection;
 
 const classes = ClassGroup({
   sectionContainer: {
-    decoration: "font-font2 pb-36",
+    layout: "flex flex-col mx-auto mb-32",
+    decoration: "font-font2",
+    xl2: "2xl:max-w-7xl",
+    xl: "xl:max-w-5xl",
   },
 
   creationsHeader: {
-    layout: "w-full flex justify-between px-80 items-center pb-16",
+    layout: "w-full flex justify-between items-center pb-16",
   },
 
   title: {
@@ -98,6 +101,6 @@ const classes = ClassGroup({
   },
 
   cardContainer: {
-    layout: "grid grid-cols-4 justify-items-center px-[19rem] gap-y-10",
+    layout: "grid grid-cols-4 justify-items-center gap-y-10 gap-x-10",
   },
 });

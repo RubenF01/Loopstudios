@@ -48,7 +48,13 @@ const Footer = () => {
   return (
     <div className={classes.footerContainer}>
       <div className={classes.topFooter}>
-        <img src="/logo.svg" alt="logo" />
+        <Image
+          width="140"
+          height="50"
+          src="/logo.svg"
+          alt="logo"
+          objectFit="contain"
+        />
         <div className={classes.socialContainer}>
           {SocialList.map((icon) => (
             <div className={classes.iconContainer} key={icon.title}>
@@ -93,7 +99,7 @@ const classes = ClassGroup({
   },
 
   socialContainer: {
-    layout: "flex",
+    layout: "flex gap-x-3",
   },
 
   iconContainer: {
@@ -107,7 +113,7 @@ const classes = ClassGroup({
   },
 
   botNav: {
-    layout: "flex gap-x-8",
+    layout: "flex gap-x-7",
   },
 
   navElement: {
@@ -116,7 +122,7 @@ const classes = ClassGroup({
   },
 
   socialIcon: {
-    layout: "px-2 cursor-pointer",
+    layout: "cursor-pointer",
   },
 
   copyright: {
