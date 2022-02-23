@@ -45,6 +45,7 @@ const FooterNav = [
 ];
 
 const Footer = () => {
+ // test
   return (
     <div className={classes.footerContainer}>
       <div className={classes.topFooter}>
