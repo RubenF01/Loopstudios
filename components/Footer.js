@@ -95,7 +95,8 @@ const classes = ClassGroup({
   },
 
   topFooter: {
-    layout: "flex w-full justify-between px-80 pb-5",
+    layout: "flex w-full justify-between",
+    xl: "xl:max-w-5xl xl:mx-auto xl:mb-3"
   },
 
   socialContainer: {
@@ -108,8 +109,9 @@ const classes = ClassGroup({
   },
 
   botFooter: {
-    layout: "w-full flex justify-between px-80",
+    layout: "w-full flex justify-between",
     decoration: "text-white font-font1",
+    xl: "xl:max-w-5xl xl:mx-auto"
   },
 
   botNav: {

@@ -15,7 +15,7 @@ const CreationsCard = ({ imgSrcDesktop, imgSrcMobile, title }) => {
           {title.toUpperCase()}
         </h1>
       </div>
-    </div> // move ternary to classes object.
+    </div>
   );
 };
 
