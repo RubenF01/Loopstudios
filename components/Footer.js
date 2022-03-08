@@ -45,7 +45,6 @@ const FooterNav = [
 ];
 
 const Footer = () => {
- // test
   return (
     <div className={classes.footerContainer}>
       <div className={classes.topFooter}>
@@ -92,12 +91,12 @@ export default Footer;
 
 const classes = ClassGroup({
   footerContainer: {
-    decoration: "bg-black py-10",
+    decoration: "bg-black py-10 flex flex-col items-center",
   },
 
   topFooter: {
     layout: "flex w-full justify-between",
-    xl: "xl:max-w-5xl xl:mx-auto xl:mb-3"
+    xl: "xl:max-w-7xl xl:mb-3",
   },
 
   socialContainer: {
@@ -112,7 +111,7 @@ const classes = ClassGroup({
   botFooter: {
     layout: "w-full flex justify-between",
     decoration: "text-white font-font1",
-    xl: "xl:max-w-5xl xl:mx-auto"
+    xl: "xl:max-w-7xl",
   },
 
   botNav: {

@@ -9,7 +9,7 @@ const CreationsCard = ({ imgSrcDesktop, imgSrcMobile, title }) => {
       <div className={classes.overlay}>
         <h1
           className={`${classes.title} ${
-            title === "the grid" ? "pl-10 pr-20" : "px-10"
+            title === "the grid" ? "pl-14 pr-28" : "px-16"
           }`}
         >
           {title.toUpperCase()}
@@ -23,20 +23,20 @@ export default CreationsCard;
 
 const classes = ClassGroup({
   cardContainer: {
-    layout: "relative w-65",
+    layout: "relative w-full",
     decoration: "cursor-pointer text-white hover:text-black",
   },
 
   imageFigure: {
-    layout: "h-[450px] object-cover brightness-75",
+    layout: "h-[500px] brightness-75 w-full",
   },
 
   cardImg: {
-    layout: "z-[-1] w-full h-full",
+    layout: "z-[-1] w-full h-full object-cover",
   },
 
   title: {
-    layout: `absolute text-[30px] inset-0 pt-[22rem] leading-8`,
+    layout: `block text-[30px] pt-[25rem] ml-0 leading-8`,
   },
 
   overlay: {
