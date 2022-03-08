@@ -84,7 +84,7 @@ const classes = ClassGroup({
     decoration: "font-font2",
     xl2: "2xl:max-w-7xl",
     xl: "xl:max-w-5xl",
-    lg: "lg:max-w-4xl"
+    lg: "lg:max-w-4xl",
   },
 
   creationsHeader: {
@@ -102,7 +102,8 @@ const classes = ClassGroup({
   },
 
   cardContainer: {
-    layout: "grid grid-cols-4 justify-items-center gap-y-10 gap-x-10",
-    xl: "xl:gap-5"
+    layout: "grid grid-cols-4 justify-items-center",
+    xl: "xl:gap-10",
+    lg: "lg:gap-5",
   },
 });

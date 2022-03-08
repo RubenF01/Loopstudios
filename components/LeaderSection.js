@@ -25,8 +25,9 @@ export default LeaderSection;
 
 const classes = ClassGroup({
   sectionContainer: {
-    layout: "flex 2xl:max-w-7xl mx-auto relative w-full my-32",
-    xl: "xl:max-w-5xl",
+    layout: "flex mx-auto relative w-full my-32",
+    xl: "xl:max-w-7xl",
+    lg: "lg:max-w-4xl",
   },
 
   sectionImage: {
@@ -35,9 +36,10 @@ const classes = ClassGroup({
 
   textContainer: {
     layout:
-      "max-w-xl leading-none max-h-[35vh] mt-96 ml-[-160px] absolute bottom-0 right-0 pt-24 pl-24",
+      "max-w-xl leading-none max-h-[35vh] mt-96 ml-[-160px] absolute bottom-0 right-0 pr-0",
     decoration: "bg-white",
-    xl2: "2xl:pr-0",
+    xl: "xl:pt-24 xl:pl-24",
+    lg: "lg:pt-16 lg:pl-12",
   },
 
   title: {

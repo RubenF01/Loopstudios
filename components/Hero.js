@@ -36,8 +36,9 @@ const classes = ClassGroup({
   },
 
   textLayout: {
-    layout:
-      "flex max-w-7xl mx-auto items-center h-full flex-1 justify-start w-full",
+    layout: "flex mx-auto items-center h-full flex-1 justify-start w-full",
+    xl: "xl:max-w-7xl",
+    lg: "lg:max-w-4xl",
   },
 
   textContainer: {
