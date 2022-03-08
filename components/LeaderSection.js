@@ -46,6 +46,6 @@ const classes = ClassGroup({
   },
 
   paragraph: {
-    decoration: "font-font1 text-darkGray",
+    decoration: "font-font1 text-darkGray leading-relaxed",
   },
 });

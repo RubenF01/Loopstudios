@@ -11,10 +11,12 @@ const Hero = () => {
           src="/desktop/image-hero.jpg"
           alt="hero"
         />
-        <div className={classes.textContainer}>
-          <h1 className={classes.heroText}>IMMERSIVE</h1>
-          <h1 className={classes.heroText}>EXPERIENCES</h1>
-          <h1 className={classes.heroText}>THAT DELIVER</h1>
+        <div className={classes.textLayout}>
+          <div className={classes.textContainer}>
+            <h1 className={classes.heroText}>IMMERSIVE</h1>
+            <h1 className={classes.heroText}>EXPERIENCES</h1>
+            <h1 className={classes.heroText}>THAT DELIVER</h1>
+          </div>
         </div>
       </div>
     </div>
@@ -30,12 +32,17 @@ const classes = ClassGroup({
   },
 
   heroContent: {
-    layout: "min-h-[80vh]",
+    layout: "min-h-[80vh] flex flex-col",
+  },
+
+  textLayout: {
+    layout:
+      "flex max-w-7xl mx-auto items-center h-full flex-1 justify-start w-full",
   },
 
   textContainer: {
     layout:
-      "border-2 absolute pl-10 pr-24 py-4 flex flex-col space-y-[-30px] top-60 left-60",
+      "border-2 pl-10 pr-24 py-4 flex flex-col space-y-[-30px] top-60 left-60",
   },
 
   heroText: {

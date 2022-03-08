@@ -31,11 +31,11 @@ export default NavBar;
 
 const classes = ClassGroup({
   navContainer: {
-    layout: "flex justify-between w-full pt-16 max-w-7xl mx-auto",
+    layout: "flex justify-between w-full pt-16 max-w-7xl mx-auto left-60",
   },
 
   navElementsContainer: {
-    layout: "flex",
+    layout: "flex relative",
   },
 
   navElement: {
