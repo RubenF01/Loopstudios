@@ -35,7 +35,7 @@ const classes = ClassGroup({
 
   textContainer: {
     layout:
-      "border-2 absolute pl-10 pr-24 py-4 flex flex-col space-y-[-30px] top-60 left-36",
+      "border-2 absolute pl-10 pr-24 py-4 flex flex-col space-y-[-30px] top-60 left-60",
   },
 
   heroText: {
