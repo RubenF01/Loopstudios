@@ -4,8 +4,10 @@ import LeaderSection from "../components/LeaderSection";
 import CreationsSection from "../components/CreationsSection";
 import Footer from "../components/Footer";
 import SideBar from "../components/SideBar";
+import { useState } from "react";
 
 export default function Home() {
+  const [sidebar, setSidebar] = useState(false);
   return (
     <div>
       <Head>
@@ -23,8 +25,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <SideBar />
-        <Hero />
+        <SideBar sidebar={sidebar} />
+        <Hero sidebar={sidebar} setSidebar={setSidebar} />
         <LeaderSection />
         <CreationsSection />
         <Footer />

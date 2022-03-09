@@ -1,8 +1,9 @@
 import ClassGroup from "classgroup";
 
-const Hamburger = () => {
+const Hamburger = ({ sidebar, setSidebar }) => {
+  const handleSidebar = () => setSidebar(!sidebar);
   return (
-    <div className="tham tham-w-8">
+    <div className="tham tham-w-8" onClick={handleSidebar}>
       <div className="tham-box">
         <div className="tham-inner bg-white" />
       </div>

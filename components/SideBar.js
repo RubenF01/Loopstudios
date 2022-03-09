@@ -1,8 +1,6 @@
 import ClassGroup from "classgroup";
-import { useState } from "react";
 
-const SideBar = () => {
-  const [sidebar, setSidebar] = useState(false);
+const SideBar = ({ sidebar }) => {
   return (
     <div className={classes.sidebarContainer}>
       <div className={classes.topSidebar}>
@@ -11,7 +9,7 @@ const SideBar = () => {
         </div>
         <button type="button">X</button>
       </div>
-      <div className={classes.botSidebar}>
+      <div className={`${classes.botSidebar} ${sidebar ? "" : "hidden"}`}>
         <a href="#">About</a>
         <a href="#">Careers</a>
         <a href="#">Events</a>
@@ -26,7 +24,7 @@ export default SideBar;
 
 const classes = ClassGroup({
   sidebarContainer: {
-    decoration: "bg-black text-white hidden",
+    decoration: "bg-black text-white",
     layout: "h-screen w-screen z-30 absolute",
   },
 

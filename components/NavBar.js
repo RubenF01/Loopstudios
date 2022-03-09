@@ -3,14 +3,18 @@ import { useMedia } from "react-use";
 import NavBarLinks from "./NavBarLinks";
 import Hamburger from "./Hamburger";
 
-const NavBar = () => {
+const NavBar = ({ sidebar, setSidebar }) => {
   const desktopSize = useMedia("(min-width: 1024px)");
   return (
     <div className={classes.navContainer}>
       <div>
         <img src="/logo.svg" alt="logo" />
       </div>
-      {desktopSize ? <NavBarLinks /> : <Hamburger />}
+      {desktopSize ? (
+        <NavBarLinks />
+      ) : (
+        <Hamburger sidebar={sidebar} setSidebar={setSidebar} />
+      )}
     </div>
   );
 };

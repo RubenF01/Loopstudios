@@ -1,10 +1,10 @@
 import NavBar from "./NavBar";
 import ClassGroup from "classgroup";
 
-const Hero = () => {
+const Hero = ({ sidebar, setSidebar }) => {
   return (
     <div className={classes.heroContainer}>
-      <NavBar />
+      <NavBar sidebar={sidebar} setSidebar={setSidebar} />
       <div className={classes.heroContent}>
         <img
           className={classes.heroImage}
