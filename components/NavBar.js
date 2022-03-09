@@ -1,28 +1,16 @@
 import ClassGroup from "classgroup";
+import { useMedia } from "react-use";
+import NavBarLinks from "./NavBarLinks";
+import Hamburger from "./Hamburger";
 
 const NavBar = () => {
+  const desktopSize = useMedia("(min-width: 1024px)");
   return (
     <div className={classes.navContainer}>
       <div>
         <img src="/logo.svg" alt="logo" />
       </div>
-      <div className={classes.navElementsContainer}>
-        <a className={classes.navElement} href="#">
-          About
-        </a>
-        <a className={classes.navElement} href="#">
-          Careers
-        </a>
-        <a className={classes.navElement} href="#">
-          Events
-        </a>
-        <a className={classes.navElement} href="#">
-          Products
-        </a>
-        <a className={classes.navElement} href="#">
-          Support
-        </a>
-      </div>
+      {desktopSize ? <NavBarLinks /> : <Hamburger />}
     </div>
   );
 };
