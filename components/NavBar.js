@@ -1,10 +1,8 @@
 import ClassGroup from "classgroup";
-import { useMedia } from "react-use";
 import NavBarLinks from "./NavBarLinks";
 import Hamburger from "./Hamburger";
 
-const NavBar = ({ sidebar, setSidebar }) => {
-  const desktopSize = useMedia("(min-width: 1024px)");
+const NavBar = ({ handleSidebar, desktopSize }) => {
   return (
     <div className={classes.navContainer}>
       <div>
@@ -13,7 +11,7 @@ const NavBar = ({ sidebar, setSidebar }) => {
       {desktopSize ? (
         <NavBarLinks />
       ) : (
-        <Hamburger sidebar={sidebar} setSidebar={setSidebar} />
+        <Hamburger handleSidebar={handleSidebar}></Hamburger>
       )}
     </div>
   );
@@ -26,6 +24,7 @@ const classes = ClassGroup({
     layout: "flex justify-between w-full pt-16 xl:max-w-7xl mx-auto left-60",
     xl: "xl:max-w-7xl",
     lg: "lg:max-w-4xl",
+    md: "md:max-w-2xl",
   },
 
   navElementsContainer: {

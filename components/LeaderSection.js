@@ -27,24 +27,28 @@ const classes = ClassGroup({
   sectionContainer: {
     layout: "flex mx-auto relative w-full my-32",
     xl: "xl:max-w-7xl",
-    lg: "lg:max-w-4xl",
+    lg: "lg:max-w-4xl lg:flex-row lg:justify-start",
+    md: "md:max-w-2xl md:flex-col md:items-center",
   },
 
   sectionImage: {
-    layout: "w-[70%]",
+    lg: "lg:w-[70%]",
+    md: "md:w-full",
   },
 
   textContainer: {
-    layout:
-      "max-w-xl leading-none max-h-[35vh] mt-96 ml-[-160px] absolute bottom-0 right-0 pr-0",
+    layout: "leading-none max-h-[35vh]",
     decoration: "bg-white",
     xl: "xl:pt-24 xl:pl-24",
-    lg: "lg:pt-16 lg:pl-12",
+    lg: "lg:pt-16 lg:pl-12 lg:ml-[-160px] lg:absolute lg:bottom-0 lg:right-0 lg:pr-0 lg:mt-96 lg:text-left lg:max-w-xl",
+    md: "md:text-center",
   },
 
   title: {
     layout: "pb-6",
     decoration: "text-[45px] font-font2",
+    lg: "lg:pt-0",
+    md: "md:pt-10",
   },
 
   paragraph: {

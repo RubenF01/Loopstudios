@@ -1,23 +1,34 @@
 import NavBar from "./NavBar";
 import ClassGroup from "classgroup";
 
-const Hero = ({ sidebar, setSidebar }) => {
+const Hero = ({ handleSidebar, desktopSize }) => {
   return (
     <div className={classes.heroContainer}>
-      <NavBar sidebar={sidebar} setSidebar={setSidebar} />
+      <NavBar handleSidebar={handleSidebar} desktopSize={desktopSize} />
       <div className={classes.heroContent}>
         <img
           className={classes.heroImage}
           src="/desktop/image-hero.jpg"
           alt="hero"
         />
-        <div className={classes.textLayout}>
-          <div className={classes.textContainer}>
-            <h1 className={classes.heroText}>IMMERSIVE</h1>
-            <h1 className={classes.heroText}>EXPERIENCES</h1>
-            <h1 className={classes.heroText}>THAT DELIVER</h1>
+        {desktopSize ? (
+          <div className={classes.textLayout}>
+            <div className={classes.textContainer}>
+              <h1 className={classes.heroText}>IMMERSIVE</h1>
+              <h1 className={classes.heroText}>EXPERIENCES</h1>
+              <h1 className={classes.heroText}>THAT DELIVER</h1>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className={classes.textLayout}>
+            <div className={classes.textContainer}>
+              <h1 className={classes.heroText}>IMMERSIVE</h1>
+              <h1 className={classes.heroText}>EXPERIENCES</h1>
+              <h1 className={classes.heroText}>THAT</h1>
+              <h1 className={classes.heroText}>DELIVER</h1>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -36,14 +47,16 @@ const classes = ClassGroup({
   },
 
   textLayout: {
-    layout: "flex mx-auto items-center h-full flex-1 justify-start w-full",
+    layout: "flex mx-auto items-center h-full flex-1 w-full",
     xl: "xl:max-w-7xl",
-    lg: "lg:max-w-4xl",
+    lg: "lg:max-w-4xl lg:justify-start",
+    md: "md:max-w-2xl md:justify-center",
   },
 
   textContainer: {
-    layout:
-      "border-2 pl-10 pr-24 py-4 flex flex-col space-y-[-30px] top-60 left-60",
+    layout: "border-2 pl-10 pr-24 py-4 flex flex-col space-y-[-30px]",
+    lg: "lg:pr-24",
+    md: "md:pr-12",
   },
 
   heroText: {

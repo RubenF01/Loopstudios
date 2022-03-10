@@ -1,15 +1,21 @@
 import ClassGroup from "classgroup";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-const SideBar = ({ sidebar }) => {
+const SideBar = ({ handleSidebar, sidebar }) => {
   return (
-    <div className={classes.sidebarContainer}>
+    <div className={`${classes.sidebarContainer} ${sidebar ? "" : "hidden"}`}>
       <div className={classes.topSidebar}>
         <div>
           <img src="/logo.svg" alt="logo" />
         </div>
-        <button type="button">X</button>
+        <FontAwesomeIcon
+          className={classes.closeButton}
+          icon={faXmark}
+          onClick={handleSidebar}
+        />
       </div>
-      <div className={`${classes.botSidebar} ${sidebar ? "" : "hidden"}`}>
+      <div className={classes.botSidebar}>
         <a href="#">About</a>
         <a href="#">Careers</a>
         <a href="#">Events</a>
@@ -25,14 +31,20 @@ export default SideBar;
 const classes = ClassGroup({
   sidebarContainer: {
     decoration: "bg-black text-white",
-    layout: "h-screen w-screen z-30 absolute",
+    layout: "h-screen w-full z-30 absolute pt-16",
   },
 
   topSidebar: {
-    layout: "flex justify-between",
+    layout: "flex justify-between mx-auto",
+    md: "md:max-w-2xl",
+  },
+
+  closeButton: {
+    layout: "h-8",
   },
 
   botSidebar: {
-    layout: "flex flex-col",
+    layout: "flex flex-col mx-auto",
+    md: "md:max-w-2xl",
   },
 });

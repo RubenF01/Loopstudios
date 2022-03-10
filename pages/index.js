@@ -5,9 +5,13 @@ import CreationsSection from "../components/CreationsSection";
 import Footer from "../components/Footer";
 import SideBar from "../components/SideBar";
 import { useState } from "react";
+import { useMedia } from "react-use";
 
 export default function Home() {
   const [sidebar, setSidebar] = useState(false);
+  const handleSidebar = () => setSidebar(!sidebar);
+  const desktopSize = useMedia("(min-width: 1024px)");
+
   return (
     <div>
       <Head>
@@ -25,11 +29,11 @@ export default function Home() {
       </Head>
 
       <main>
-        <SideBar sidebar={sidebar} />
-        <Hero sidebar={sidebar} setSidebar={setSidebar} />
+        <SideBar handleSidebar={handleSidebar} sidebar={sidebar} />
+        <Hero handleSidebar={handleSidebar} desktopSize={desktopSize} />
         <LeaderSection />
-        <CreationsSection />
-        <Footer />
+        <CreationsSection desktopSize={desktopSize} />
+        <Footer desktopSize={desktopSize} />
       </main>
     </div>
   );

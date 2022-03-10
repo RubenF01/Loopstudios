@@ -40,40 +40,64 @@ const CardContent = [
 
   {
     imgSrcDesktop: "/desktop/image-curiosity.jpg",
-    imgSrcMobile: "/mobile/image-pocket-borealis.jpg",
+    imgSrcMobile: "/mobile/image-curiosity.jpg",
     title: "the curiosity",
   },
 
   {
     imgSrcDesktop: "/desktop/image-fisheye.jpg",
-    imgSrcMobile: "/mobile/image-pocket-borealis.jpg",
+    imgSrcMobile: "/mobile/image-fisheye.jpg",
     title: "make it fisheye",
   },
 ];
 
-const CreationsSection = () => {
-  return (
-    <div className={classes.sectionContainer}>
-      <div className={classes.creationsHeader}>
-        <h1 className={classes.title}>OUR CREATIONS</h1>
+const CreationsSection = ({ desktopSize }) => {
+  if (desktopSize) {
+    return (
+      <div className={classes.sectionContainer}>
+        <div className={classes.creationsHeader}>
+          <h1 className={classes.title}>OUR CREATIONS</h1>
+          <a className={classes.button} hred="#">
+            <button>SEE ALL</button>
+          </a>
+        </div>
+        <div className={classes.cardContainer}>
+          {CardContent.map((card) => {
+            return (
+              <CreationsCard
+                desktopSize={desktopSize}
+                imgSrcDesktop={card.imgSrcDesktop}
+                title={card.title}
+                key={card.title}
+              />
+            );
+          })}
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className={classes.sectionContainer}>
+        <div className={classes.creationsHeader}>
+          <h1 className={classes.title}>OUR CREATIONS</h1>
+        </div>
+        <div className={classes.cardContainer}>
+          {CardContent.map((card) => {
+            return (
+              <CreationsCard
+                imgSrcMobile={card.imgSrcMobile}
+                title={card.title}
+                key={card.title}
+              />
+            );
+          })}
+        </div>
         <a className={classes.button} hred="#">
           <button>SEE ALL</button>
         </a>
       </div>
-      <div className={classes.cardContainer}>
-        {CardContent.map((card) => {
-          return (
-            <CreationsCard
-              imgSrcDesktop={card.imgSrcDesktop}
-              imgSrcMobile={card.imgSrcMobile}
-              title={card.title}
-              key={card.title}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default CreationsSection;
@@ -85,10 +109,13 @@ const classes = ClassGroup({
     xl2: "2xl:max-w-7xl",
     xl: "xl:max-w-5xl",
     lg: "lg:max-w-4xl",
+    md: "md:max-w-2xl",
   },
 
   creationsHeader: {
     layout: "w-full flex justify-between items-center pb-16",
+    lg: "lg:justify-between",
+    sm: "sm:justify-center",
   },
 
   title: {
@@ -102,8 +129,9 @@ const classes = ClassGroup({
   },
 
   cardContainer: {
-    layout: "grid grid-cols-4 justify-items-center",
+    layout: "grid justify-items-center",
     xl: "xl:gap-10",
-    lg: "lg:gap-5",
+    lg: "lg:gap-5 lg:grid-cols-4",
+    sm: "sm:gap-10",
   },
 });

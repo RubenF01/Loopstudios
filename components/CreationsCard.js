@@ -1,10 +1,14 @@
 import ClassGroup from "classgroup";
 
-const CreationsCard = ({ imgSrcDesktop, imgSrcMobile, title }) => {
+const CreationsCard = ({ imgSrcDesktop, imgSrcMobile, title, desktopSize }) => {
   return (
     <div className={classes.cardContainer}>
       <figure className={classes.imageFigure}>
-        <img className={classes.cardImg} src={imgSrcDesktop} alt={title} />
+        <img
+          className={classes.cardImg}
+          src={`${desktopSize ? imgSrcDesktop : imgSrcMobile}`}
+          alt={title}
+        />
       </figure>
       <div className={classes.overlay}>
         <h1
