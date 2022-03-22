@@ -161,7 +161,7 @@ const classes = ClassGroup({
 
   iconContainer: {
     content:
-      "hover:after:content-[''] hover:after:bg-white hover:after:h-px hover:after:w-6 hover:after:absolute hover:relative hover:after:z-10 hover:after:bottom-0 flex justify-center",
+      "hover:after:content-[''] hover:after:bg-white hover:after:h-px hover:after:w-6 hover:after:absolute hover:relative hover:after:z-10 hover:after:bottom-[-10px] flex justify-center",
   },
 
   botFooter: {
