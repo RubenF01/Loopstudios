@@ -110,12 +110,13 @@ const classes = ClassGroup({
     xl: "xl:max-w-5xl",
     lg: "lg:max-w-4xl",
     md: "md:max-w-2xl",
+    mobile: "max-w-sm",
   },
 
   creationsHeader: {
-    layout: "w-full flex justify-between items-center pb-16",
+    layout: "w-full flex items-center pb-16",
     lg: "lg:justify-between",
-    sm: "sm:justify-center",
+    mobile: "justify-center",
   },
 
   title: {
@@ -127,13 +128,13 @@ const classes = ClassGroup({
     decoration: "font-font2 border-black font-bold",
     content: "hover:bg-black hover:text-white",
     lg: "lg:text-base lg:px-5 lg:py-1 lg:mt-0",
-    sm: "sm:text-xl sm:mt-14 sm:px-16 sm:py-3",
+    mobile: "text-xl mt-14 px-16 py-3",
   },
 
   cardContainer: {
     layout: "grid justify-items-center",
     xl: "xl:gap-10",
     lg: "lg:gap-5 lg:grid-cols-4",
-    sm: "sm:gap-10",
+    mobile: "gap-8",
   },
 });

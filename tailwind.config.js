@@ -13,9 +13,6 @@ module.exports = {
         font1: ["Alata"],
         font2: ["Josefin Sans"],
       },
-      screens: {
-        xsm: "400px",
-      },
     },
   },
   plugins: [require("tailwind-hamburgers")],

@@ -25,11 +25,11 @@ export default LeaderSection;
 
 const classes = ClassGroup({
   sectionContainer: {
-    layout: "flex mx-auto relative w-full my-32",
+    layout: "flex mx-auto relative w-full",
     xl: "xl:max-w-7xl",
     lg: "lg:max-w-4xl lg:flex-row lg:justify-start",
-    md: "md:max-w-2xl",
-    xsm: "xsm:flex-col xsm:items-center",
+    sm: "sm:max-w-2xl sm:my-32",
+    mobile: "max-w-sm flex-col items-center my-28",
   },
 
   sectionImage: {
@@ -42,14 +42,16 @@ const classes = ClassGroup({
     decoration: "bg-white",
     xl: "xl:pt-24 xl:pl-24",
     lg: "lg:pt-16 lg:pl-12 lg:ml-[-160px] lg:absolute lg:bottom-0 lg:right-0 lg:pr-0 lg:mt-96 lg:text-left lg:max-w-xl",
-    md: "md:text-center",
+    mobile: "text-center pt-10",
   },
 
   title: {
     layout: "pb-6",
-    decoration: "text-[45px] font-font2",
+    decoration: "font-font2",
     lg: "lg:pt-0",
     md: "md:pt-10",
+    sm: "sm:text-[45px]",
+    mobile: "text-[40px]",
   },
 
   paragraph: {

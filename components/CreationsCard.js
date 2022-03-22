@@ -14,8 +14,8 @@ const CreationsCard = ({ imgSrcDesktop, imgSrcMobile, title, desktopSize }) => {
         <h1
           className={`${classes.title} ${
             title === "the grid"
-              ? "xl:pl-14 xl:pr-28 lg:pl-5 lg:pr-16 sm:pl-8 sm:pr-[35rem]"
-              : "xl:px-16 lg:px-5 sm:pl-8 sm:pr-[30rem]"
+              ? "xl:pl-10 xl:pr-28 lg:pl-5 lg:pr-16 sm:pl-8 sm:pr-[35rem] pl-5 pr-[20rem]"
+              : "xl:pl-10 xl:pr-20 lg:px-5 sm:pl-8 sm:pr-[30rem] pl-5 pr-[14rem]"
           }`}
         >
           {title.toUpperCase()}
@@ -44,10 +44,11 @@ const classes = ClassGroup({
   },
 
   title: {
-    layout: "block text-[30px] leading-8",
+    layout: "block leading-8",
     xl: "xl:pt-[25rem]",
     lg: "lg:pt-[22rem]",
-    sm: "sm:pt-[8rem]",
+    sm: "sm:pt-[8rem] sm:text-[30px]",
+    mobile: "pt-[3.5rem] text-[25px]",
   },
 
   overlay: {

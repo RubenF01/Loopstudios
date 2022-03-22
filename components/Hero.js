@@ -50,17 +50,21 @@ const classes = ClassGroup({
     layout: "flex mx-auto items-center h-full flex-1 w-full",
     xl: "xl:max-w-7xl",
     lg: "lg:max-w-4xl lg:justify-start",
-    md: "md:max-w-2xl md:justify-center",
+    md: "md:max-w-2xl",
+    mobile: "max-w-lg justify-center",
   },
 
   textContainer: {
     layout: "border-2 pl-10 pr-24 py-4 flex flex-col space-y-[-30px]",
     lg: "lg:pr-24",
     md: "md:pr-12",
+    mobile: "pr-8",
   },
 
   heroText: {
-    decoration: "font-font2 text-white text-[60px]",
+    decoration: "font-font2 text-white",
+    sm: "sm:text-[60px]",
+    mobile: "text-[45px]",
   },
 
   heroImage: {

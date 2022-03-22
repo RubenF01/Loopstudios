@@ -146,16 +146,17 @@ const classes = ClassGroup({
   },
 
   topFooter: {
-    layout: "flex w-full mb-3",
+    layout: "flex w-full",
     xl: "xl:max-w-7xl",
-    lg: "lg:max-w-4xl lg:flex-row lg:justify-between lg:items-start lg:mb-3 lg:gap-y-0",
+    lg: "lg:max-w-4xl lg:flex-row lg:justify-between lg:items-start lg:mb-3 lg:gap-y-0 lg:mb-3",
     sm: "sm:flex-col sm:items-center sm:mb-16 sm:gap-y-6",
+    mobile: "flex-col items-center mb-16 gap-y-6",
   },
 
   socialContainer: {
     layout: "flex",
     lg: "lg:gap-x-3",
-    sm: "sm:gap-x-5",
+    mobile: "gap-x-5",
   },
 
   iconContainer: {
@@ -167,13 +168,13 @@ const classes = ClassGroup({
     layout: "flex w-full justify-between",
     xl: "xl:max-w-7xl",
     lg: "lg:max-w-4xl lg:flex-row lg:items-start lg:gap-y-0 lg:mb-0",
-    sm: "sm:flex-col sm:items-center sm:gap-y-8 sm:mb-8",
+    mobile: "flex-col items-center gap-y-8 mb-8",
   },
 
   botNav: {
     layout: "flex",
     lg: "lg:flex-row lg:gap-x-7",
-    sm: "sm:flex-col sm:gap-y-7",
+    mobile: "flex-col gap-y-7",
   },
 
   navElement: {

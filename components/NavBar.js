@@ -21,10 +21,11 @@ export default NavBar;
 
 const classes = ClassGroup({
   navContainer: {
-    layout: "flex justify-between w-full pt-16 xl:max-w-7xl mx-auto left-60",
+    layout: "flex justify-between w-full pt-16 mx-auto left-60",
     xl: "xl:max-w-7xl",
     lg: "lg:max-w-4xl",
     md: "md:max-w-2xl",
+    mobile: "max-w-sm",
   },
 
   navElementsContainer: {
