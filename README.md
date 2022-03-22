@@ -4,7 +4,7 @@ Loppstudios is a technology landing page made with Next.JS and Tailwind. Here is
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
