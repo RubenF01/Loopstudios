@@ -28,7 +28,8 @@ const classes = ClassGroup({
     layout: "flex mx-auto relative w-full my-32",
     xl: "xl:max-w-7xl",
     lg: "lg:max-w-4xl lg:flex-row lg:justify-start",
-    md: "md:max-w-2xl md:flex-col md:items-center",
+    md: "md:max-w-2xl",
+    xsm: "xsm:flex-col xsm:items-center",
   },
 
   sectionImage: {

@@ -30,7 +30,7 @@ export default SideBar;
 
 const classes = ClassGroup({
   sidebarContainer: {
-    decoration: "bg-black text-white",
+    decoration: "bg-black text-white font-font2 text-4xl",
     layout: "h-screen w-full z-30 absolute pt-16",
   },
 
@@ -44,7 +44,7 @@ const classes = ClassGroup({
   },
 
   botSidebar: {
-    layout: "flex flex-col mx-auto",
+    layout: "flex flex-col mx-auto mt-44 space-y-6",
     md: "md:max-w-2xl",
   },
 });

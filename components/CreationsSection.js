@@ -123,9 +123,11 @@ const classes = ClassGroup({
   },
 
   button: {
-    layout: "border-[1px] flex self-center px-5 py-1",
+    layout: "border-[1px] flex self-center",
     decoration: "font-font2 border-black font-bold",
     content: "hover:bg-black hover:text-white",
+    lg: "lg:text-base lg:px-5 lg:py-1 lg:mt-0",
+    sm: "sm:text-xl sm:mt-14 sm:px-16 sm:py-3",
   },
 
   cardContainer: {
