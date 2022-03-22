@@ -29,7 +29,7 @@ const classes = ClassGroup({
     xl: "xl:max-w-7xl",
     lg: "lg:max-w-4xl lg:flex-row lg:justify-start",
     sm: "sm:max-w-2xl sm:my-32",
-    mobile: "max-w-sm flex-col items-center my-28",
+    mobile: "max-w-xs flex-col items-center my-28",
   },
 
   sectionImage: {

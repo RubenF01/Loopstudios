@@ -25,7 +25,7 @@ const classes = ClassGroup({
     xl: "xl:max-w-7xl",
     lg: "lg:max-w-4xl",
     md: "md:max-w-2xl",
-    mobile: "max-w-sm",
+    mobile: "max-w-xs",
   },
 
   navElementsContainer: {

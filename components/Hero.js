@@ -58,13 +58,13 @@ const classes = ClassGroup({
     layout: "border-2 pl-10 pr-24 py-4 flex flex-col space-y-[-30px]",
     lg: "lg:pr-24",
     md: "md:pr-12",
-    mobile: "pr-8",
+    mobile: "pr-6",
   },
 
   heroText: {
     decoration: "font-font2 text-white",
-    sm: "sm:text-[60px]",
-    mobile: "text-[45px]",
+    sm: "sm:text-[60px] sm:leading-normal",
+    mobile: "text-[35px] leading-loose",
   },
 
   heroImage: {

@@ -35,7 +35,8 @@ const classes = ClassGroup({
   },
 
   topSidebar: {
-    layout: "flex justify-between mx-auto max-w-sm",
+    sm: "sm:max-w-2xl",
+    layout: "flex justify-between mx-auto max-w-xs",
   },
 
   closeButton: {
@@ -43,6 +44,7 @@ const classes = ClassGroup({
   },
 
   botSidebar: {
-    layout: "flex flex-col mx-auto mt-44 space-y-6 max-w-sm",
+    sm: "sm:max-w-2xl",
+    layout: "flex flex-col mx-auto mt-44 space-y-6 max-w-xs",
   },
 });

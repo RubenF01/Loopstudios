@@ -110,7 +110,7 @@ const classes = ClassGroup({
     xl: "xl:max-w-5xl",
     lg: "lg:max-w-4xl",
     md: "md:max-w-2xl",
-    mobile: "max-w-sm",
+    mobile: "max-w-xs",
   },
 
   creationsHeader: {
@@ -120,7 +120,8 @@ const classes = ClassGroup({
   },
 
   title: {
-    layout: "text-[40px]",
+    sm: "sm:text-[40px]",
+    mobile: "text-[35px]",
   },
 
   button: {
