@@ -1,6 +1,6 @@
 ## Loopstudios
 
-Loopstudios is a technology landing page made with Next.JS and Tailwind. Here is the preview link: https://relaxed-fermi-27ec45.netlify.app/
+Loopstudios is a landing page for a technology website made with Next.JS and Tailwind. Here is the preview link: https://relaxed-fermi-27ec45.netlify.app/
 
 ## Getting Started
 
