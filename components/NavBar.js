@@ -36,6 +36,6 @@ const classes = ClassGroup({
     layout: "font-font1 pl-8 flex justify-center",
     decortation: "text-white",
     content:
-      "hover:after:content-[''] hover:after:bg-white hover:after:h-px hover:after:w-6 hover:after:absolute hover:after:bottom-0",
+      "hover:after:content-[''] hover:after:bg-white after:h-px after:w-6 after:relative after:bottom-0 after:relative",
   },
 });
